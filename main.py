@@ -19,8 +19,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         msg = update.business_message  
         user_text = msg.text  
         
-        # نص الرد التلقائي
-        reply = f"وصلت رسالتك:\n{user_text}"  
+        # نص الرد التلقائي الذي سيصل للزبون
+        reply = f"وصلت رسالتك بنجاح:\n{user_text}"  
         
         # إرسال الرد عبر اتصال الأعمال الخاص بالملف الشخصي
         await context.bot.send_message(  
@@ -40,7 +40,7 @@ app.add_handler(
 # تحديد المنفذ الخاص بالسيرفر
 PORT = int(os.environ.get("PORT", 8443))
 
-# تهيئة حلقة الأحداث (Event Loop) يدوياً لحل مشكلة التوافقية مع Python 3.14+
+# تهيئة حلقة الأحداث (Event Loop) يدوياً لحل مشكلة التوافقية مع إصدار بايثون الحديث على سيرفر Render
 try:
     loop = asyncio.get_event_loop()
 except RuntimeError:
