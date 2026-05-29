@@ -35,8 +35,10 @@ app.add_handler(
 
 PORT = int(os.environ.get("PORT", 8443))
 
+# تعديل السطر ليتناسب مع خوادم ريندر عبر استقبال الاتصالات على المنفذ الصحيح
 app.run_webhook(
     listen="0.0.0.0",
     port=PORT,
-    webhook_url="https://tjroba-1.onrender.com"
+    webhook_url="https://tjroba-1.onrender.com",
+    secret_token="MySecretToken123"
 )
