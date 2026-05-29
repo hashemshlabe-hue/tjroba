@@ -38,5 +38,5 @@ PORT = int(os.environ.get("PORT", 8443))
 app.run_webhook(
     listen="0.0.0.0",
     port=PORT,
-    webhook_url="https://YOUR-RENDER-URL.onrender.com"
+    webhook_url="https://tjroba-1.onrender.com"
 )
