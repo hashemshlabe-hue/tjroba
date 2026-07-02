@@ -33,3 +33,35 @@
 ---
 
 ## 📁 هيكل المشروع
+
+---
+
+## 🚀 تشغيل المشروع محلياً
+
+### المتطلبات الأساسية
+- Python 3.11 أو أحدث
+- Git
+- بوت تيليجرام (أنشئه من [@BotFather](https://t.me/BotFather))
+
+### خطوات التشغيل
+
+```bash
+# 1. استنساخ المستودع
+git clone https://github.com/your-username/ImamMalikPlatform.git
+cd ImamMalikPlatform
+
+# 2. إنشاء بيئة افتراضية وتفعيلها
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+# أو
+venv\Scripts\activate      # Windows
+
+# 3. تثبيت المتطلبات
+pip install -r requirements.txt
+
+# 4. إعداد ملف البيئة
+cp .env.example .env
+# افتح .env وأدخل BOT_TOKEN و ADMIN_IDS
+
+# 5. تشغيل الخادم
+uvicorn main:app --reload
