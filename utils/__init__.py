@@ -1,0 +1,1 @@
+from utils.telegram_auth import verify_telegram_data
